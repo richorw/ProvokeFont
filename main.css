@@ -1,0 +1,146 @@
+@font-face {
+	font-family: 'provoke2';
+	src:
+	local('provoke2 Regular'),
+	local('provoke2-Regular'),
+	url('font/provoke2-Regular.woff')
+	format('opentype');
+}
+
+body {
+	background-color: #0F0F0F;
+	color: white;
+	font-family: "Roboto Condensed", sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/*home*/
+.nav {	
+	margin: 40px 60px;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+
+}
+
+.nav-link:hover {
+	border: 2px solid white;
+}
+
+h1 {
+	font-family: "provoke2", sans-serif;
+	font-size: 22vw;
+	text-align: center;
+}
+
+.intro {
+	font-size: 1.5em;
+	text-align: center;
+	margin: -50px 0 0 0;
+}
+
+/*glyph*/
+#glyphs {
+	display: grid;
+	margin: 4vw;
+	grid-template-rows: repeat(6, 130px);
+	grid-template-columns: repeat(9, 1fr);
+}
+
+#glyphs div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.2px solid #2F2F2F;
+}
+
+.glyph {
+	font-size: 3.3em;
+	font-family: "provoke2-Regular", sans-serif;
+
+}
+
+.glyph-type {
+	font-size: 1.2em;
+}
+
+/*feature*/
+#feature {
+	width: 80%;
+}
+
+
+/*sample*/
+#tryout h2 {
+	font-size: 1.8em;
+	text-align: center;
+	margin: 50px auto;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+input[type=text] {	
+	width: 82%;
+	background-color: #0F0F0F;
+	border: none;
+	border-bottom: 4px solid white;
+	color: white;
+	font-family: "provoke2-Regular", sans-serif;
+	font-size: 5vw;
+	padding: 10px 0;
+}
+
+input[type=text]:focus {
+	outline: none;
+}
+
+input[type=text]::placeholder {
+	color: #272727;
+}
+
+/*download*/
+#download {
+	display: flex;
+	justify-content: center;
+}
+
+#button {
+	width: 42vw;
+	height: 14vw;
+	background-color: white;
+	border-radius: 20px;
+	margin: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+#button span {
+	font-family: "provoke2-Regular", sans-serif;
+	font-size: 7vw;
+	color: #0F0F0F;
+}
+
+/*footer*/
+
+footer {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
