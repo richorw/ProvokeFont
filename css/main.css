@@ -1,13 +1,13 @@
 /*-------general--------*/
 
 @font-face {
-	font-family: 'provoke2-Regular';
-  	src: url('provoke2-Regular.eot'); /* IE9 Compat Modes */
-  	src: url('provoke2-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('provoke2-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('provoke2-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('provoke2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('provoke2-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-family: '../font/Provoke-Regular';
+  	src: url('../font/Provoke-Regular.eot'); /* IE9 Compat Modes */
+  	src: url('../font/Provoke-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/Provoke-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/Provoke-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/Provoke-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/Provoke-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 	font-weight: normal;
 	font-style: normal;
@@ -103,7 +103,7 @@ body {
 }
 
 h1 {
-	font-family: "provoke2-Regular", sans-serif;
+	font-family: "../font/Provoke-Regular", sans-serif;
 	font-size: 22vw;
 	text-align: center;
 	margin: 100px auto;
@@ -139,7 +139,7 @@ h1 {
 
 .glyph {
 	font-size: 3.3em;
-	font-family: "provoke2-Regular", sans-serif;
+	font-family: "../font/Provoke-Regular", sans-serif;
 
 }
 
@@ -318,7 +318,7 @@ input[type=text] {
 	border: none;
 	border-bottom: 4px solid white;
 	color: white;
-	font-family: "provoke2-Regular", sans-serif;
+	font-family: "../font/Provoke-Regular", sans-serif;
 	font-size: 5vw;
 	line-height: 1.5;
 }
@@ -351,7 +351,7 @@ input[type=text]::placeholder {
 }
 
 #button span {
-	font-family: "provoke2-Regular", sans-serif;
+	font-family: "../font/Provoke-Regular", sans-serif;
 	font-size: 5vw;
 	color: #0F0F0F;
 }
