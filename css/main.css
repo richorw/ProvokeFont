@@ -1,37 +1,100 @@
+/*-------general--------*/
+
 @font-face {
-	font-family: 'provoke2';
-	src:
-	local('provoke2 Regular'),
-	local('provoke2-Regular'),
-	url('font/provoke2-Regular.woff')
-	format('opentype');
+	font-family: 'provoke2-Regular';
+  	src: url('provoke2-Regular.eot'); /* IE9 Compat Modes */
+  	src: url('provoke2-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('provoke2-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('provoke2-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('provoke2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('provoke2-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+	font-weight: normal;
+	font-style: normal;
 }
 
-body {
-	background-color: #0F0F0F;
-	color: white;
-	font-family: "Roboto Condensed", sans-serif;
-	margin: 0;
-	box-sizing: border-box;
-}
 
-ul {
+h1, h2, p, ul {
 	margin: 0;
 	padding: 0;
 }
 
-/*home*/
+*::selection {
+	color: black;
+	background-color: white;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/bg.png");
+
+    /* Set a specific height */
+    min-height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;	
+}
+
+body {
+	background-color: rgba(15, 15, 15, 1);
+	color: white;
+	font-family: "Fira Sans Extra Condensed", "Roboto Condensed", sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: 0.04em;
+	cursor: crosshair;
+
+}
+
+.section {
+	padding: 6vh 3vw;
+	margin: 6vh auto;
+}
+
+.sub-title {
+	text-align: center;
+	font-size: 2.2em;
+	margin-bottom: 0.5em;
+
+}
+
+.line {
+	width: 100px;
+	text-align: center;
+	height: 0;
+	border-bottom: 2px solid white;
+	margin: 1em auto 2em auto;
+/*	display: none;*/
+}
+
+
+.desc {
+	text-align: center;
+	font-size: 1.3em;
+	line-height: 1.7em;
+	color: grey;
+	margin-bottom: 2em;
+	padding: 0 4em;
+}
+
+/*-------home--------*/
+
 .nav {	
-	margin: 40px 60px;
+	padding: 2.5em 4em;
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
+	letter-spacing: 0.15em;
 }
 
 .nav-link {
 	color: white;
 	text-decoration: none;
-	padding: 10px 20px;
+	padding: 1em 1.5em;
+	box-sizing: border-box;
 
 }
 
@@ -40,11 +103,12 @@ ul {
 }
 
 h1 {
-	font-family: "provoke2", sans-serif;
+	font-family: "provoke2-Regular", sans-serif;
 	font-size: 22vw;
 	text-align: center;
 	margin: 100px auto;
 	font-weight: normal;
+/*	opacity: 0.7;*/
 }
 
 .intro {
@@ -53,15 +117,20 @@ h1 {
 	margin: -50px 0 100px 0;
 }
 
-/*glyph*/
+/*-------glyphs--------*/
+
 #glyphs {
+	margin-top: -6vh;
+}
+
+.glyph-wrap {
 	display: grid;
-	margin: 4vw;
+/*	margin: 4vw;*/
 	grid-template-rows: repeat(6, 130px);
 	grid-template-columns: repeat(9, 1fr);
 }
 
-#glyphs div {
+.glyph-wrap div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -76,20 +145,162 @@ h1 {
 
 .glyph-type {
 	font-size: 1.2em;
+	text-align: center;
+	border-bottom: 2px solid white;
 }
 
-/*feature*/
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* Flip Panel */
+/*-=-=-=-=-=-=-=-=-=-=- */
 
-#feature {
-	width: 90%;
+/*.wrapper{ width: 980px; margin: 0 auto;  background-color: #bdd3de; hoverflow: hidden;}
+*/
+.panel {
+	margin: 0 auto;
+	height: 130px;
+	width: 100%;
+	position: relative;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
 }
+
+.panel .front,
+.panel .back {
+	text-align: center;
+}
+	
+.panel .front {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	z-index: 900;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	   -moz-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+
+.panel .back {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	-webkit-transform: rotateY(-180deg);
+	   -moz-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+.panel.flip .front {
+	z-index: 900;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+.panel.flip .back {
+	z-index: 1000;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+.front, .back, .box1, .box2 {
+	width: 100%;
+}
+.box1{
+	background-color: #0F0F0F;
+	color: white;
+	height: 130px;
+
+}
+.box2{
+	background-color: white;
+	color: #0F0F0F;
+	height: 130px;
+}
+
+
+/*-------feature--------*/
+
 
 .feature-text {
 	padding: 50px 4vw;
+	width: 90%;
 }
 
+/*-------sample--------*/
 
-/*sample*/
+#sample {
+	height: 100vh;
+
+}
+
+/*-------sample image--------*/
+
+#sample {
+	background-color: white;
+	color: black;
+}
+
+.sample-wrap {
+	margin: 50px auto;
+  	position: relative;
+  	margin: auto;
+}
+
+.sample-wrap img {
+	width: 100%;
+}
+
+.dot-wrap {
+	text-align: center;
+}
+
+.dot {
+  cursor:pointer;
+  height: 8px;
+  width: 8px;
+  margin: 20px 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*-------tryout--------*/
+
 #tryout h2 {
 	font-size: 1.8em;
 	text-align: center;
@@ -109,7 +320,7 @@ input[type=text] {
 	color: white;
 	font-family: "provoke2-Regular", sans-serif;
 	font-size: 5vw;
-	padding: 10px 0;
+	line-height: 1.5;
 }
 
 input[type=text]:focus {
@@ -118,9 +329,10 @@ input[type=text]:focus {
 
 input[type=text]::placeholder {
 	color: #272727;
+	line-height: 1.5;
 }
 
-/*download*/
+/*-------download--------*/
 #download {
 	display: flex;
 	justify-content: center;
@@ -144,7 +356,7 @@ input[type=text]::placeholder {
 	color: #0F0F0F;
 }
 
-/*footer*/
+/*-------footer--------*/
 
 footer {
 	display: flex;
