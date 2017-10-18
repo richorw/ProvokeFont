@@ -29,6 +29,33 @@
 		    dots[slideIndex-1].className += " active";
 		    setTimeout(showSlides, 3000); // Change image every 2 seconds
 		}
-	});
+
+		//tryout
+		$( ".selector-size" )
+		  .change(function () {
+		    $( ".selector-size option:selected" ).each(function() {
+		      var textsize = $(this).text();
+		      $( '.tryout-text').css( "font-size", textsize );
+		    });
+		  })
+		.change();	
+
+		var candy = [
+		"Provocative Materials for Thought",
+		"a platform for a new photographic expression",
+		"A quick brown fox jumps over a lazy dog",
+		"IN LENS WE MEET"
+		];
+		var n = Math.floor(Math.random() * candy.length + 1)-1; 
+		$(".tryout-text").text(candy[n]);	
+		});
+
+//autofocus
+		$(window).on("load", function() {
+  		$(".tryout-text").focus();
+		});
+
+//tryout 
+
 
 

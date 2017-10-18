@@ -3,8 +3,12 @@
 <head lang="en">
 	<meta charset="UTF-8"> 
 	<title>Provoke Typeface</title>
+	<link rel="stylesheet" type="text/css"
+　　　　media="screen and (max-width:490px)"
+　　　　href="css/mobile.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+
 	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -14,11 +18,11 @@
 <body>
 
 <!-- home -->
-<div id="home" class="parallax">
+<div id="home" class="parallax-home" name="home">
 	<header>
 		<ul class="nav">
 			<li class="nav-item">
-				<a class="nav-link" href="#">HOME</a>
+				<a class="nav-link" href="#tryout">	TRYOUT</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#glyphs">GLYPHS</a>
@@ -30,19 +34,46 @@
 				<a class="nav-link" href="#sample">SAMPLE</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#download">ABOUT</a>
+				<a class="nav-link" href="#get">GET</a>
 			</li>
 		</ul>
 	</header>
 	<h1>PROVOKE</h1>
 	<p class="intro">A Display Typeface Hommage to Provoke Magazine</p>
 </div>
+
+<!--tryout-->
+<div id="tryout" name="tryout" class="section parallax-tryout">
+	<div class="line"></div>
+	<h2 class="sub-title">'Purovōku'</h2>
+		
+		<p class="desc">Provoke font originates from the logotype of Provoke Magazine, a Japanese photography magazine in 1970s, which spreads a completely new idea of photography in Japan.</p>
+		<div class="tryout-wrap">
+			<div class="tryout-selector">
+				<select name="size" id="" class="selector-size">
+					<option value="0">24px</option>
+					<option value="1">36px</option>
+					<option value="2">48px</option>
+					<option value="3" data-default-mobile="true" selected>60px</option>
+					<option value="4" data-default-desktop="true" selected>72px</option>
+					<option value="5">96px</option>
+					<option value="6">144px</option>
+				</select>
+			</div>
+			<p class="tryout-text" contenteditable="true" spellcheck="false"> Provocative Materials for Thought</p>
+		</div>
+<!-- 		<form>
+			<input type="text" name="sample text" placeholder="Provocative materials for thought.">
+		</form> -->
+	</div>
+
 <!-- glyphs -->
 <div id="glyphs" class="section" name="glyphs">
-	<h2 class="sub-title">51 Glyphs for Most Latin Languages</h2>
 	<div class="line"></div>
+	<h2 class="sub-title">Multi-language Support</h2>
+	
 	<p class="desc">
-		Provoke font supports English, French, German and other European languages
+		Besides basic A to Z, Provoke provides various diacritics for multiple Western languages.
 	</p>
 	<div class="glyph-wrap">
 	<!-- <div class="glyph-type">UPPER<br/>CASE</div> -->
@@ -154,6 +185,16 @@
 			<div class="front"><div class="box1"><p>Z</p></div></div>
 			<div class="back"><div class="box2"><p>z</p></div></div>
 		</div>
+		<div class="glyph-type">Diacritic</div>
+		<div class="glyph">À</div>
+		<div class="glyph">É</div>
+		<div class="glyph">Ï</div>
+		<div class="glyph">Ô</div>
+		<div class="glyph">ñ</div>
+		<div class="glyph">å</div>
+		<div class="glyph">æ</div>
+		<div class="glyph">ß</div>
+		<div class="glyph">ç</div>
 		<div class="glyph-type">Num</div>
 		<div class="glyph">1</div>
 		<div class="glyph">2</div>
@@ -173,21 +214,32 @@
 		<div class="glyph">/</div>
 		<div class="glyph">\</div>
 		<div class="glyph">, .</div>
-		<div class="glyph">…</div>
-		<div class="glyph">-</div>
 		<div class="glyph">: ;</div>
 		<div class="glyph">( )</div>
 		<div class="glyph">[ ]</div>
 		<div class="glyph">{ }</div>
 		<div class="glyph">“ ”</div>
 		<div class="glyph">‘ ’</div>
+		<div class="glyph-type">And <br/>More</div>
 	</div>
 </div>
 
-<!-- sample -->
-<div id="sample" class="section parallax" name="sample">
-	<h2 class="sub-title">For Multi-media Display</h2>
+<!-- feature -->
+<div id="feature" class="section" name="feature">
 	<div class="line"></div>
+	<h2 class="sub-title">Born for BIG TITLES</h2>
+	
+	<p class="desc">
+		The shapes of Provoke have strong impact and novelty. <br/>Low ascenders and descenders make upper and low cases more harmony.
+	</p>
+	<object class="feature-text" type="image/svg+xml" data="img/feature.svg">Your browser does not support SVGs</object>
+</div>
+
+<!-- sample -->
+<div id="sample" class="section" name="sample">
+	<div class="line"></div>
+	<h2 class="sub-title">Good Display Appearance</h2>
+	
 	<p class="desc">
 		As a strong display typeface, Provoke provides a wide potential for headlines, logos and book covers.
 	</p>
@@ -203,23 +255,13 @@
 	</div>		
 </div>
 
-<!-- feature -->
-<div id="feature" class="section" name="feature">
-	<h2 class="sub-title">Creative Shapes and Strokes</h2>
-	<div class="line"></div>
-	<p class="desc">
-		Provoke font originates from the logotype of Provoke Magazine, a Japanese photography magazine in 1970s, which show great revolutionary spirit.
-	</p>
-	<object class="feature-text" type="image/svg+xml" data="img/feature.svg">Your browser does not support SVGs</object>
+<div class="section parallax-get" id="get">
+	<p class="soon">COMING SOON.</p>
+	<footer>
+© 2017&nbsp;&nbsp;<a href="http://richor.me">Richor.w</a> &nbsp;All Rights Reserved
+	</footer>
 </div>
 
-<div id="tryout">
-		<h2 class="sub-title">TRY IT NOW.</h2>
-		<div class="line"></div>
-		<form>
-			<input type="text" name="sample text" placeholder="Provocative materials for thought.">
-		</form>
-	</div>
 
 <!-- download -->
 <!-- 	<div id="download" name="download">
@@ -229,9 +271,7 @@
 	</div> -->
 
 
-<!-- 
-	<footer>
-		<p>Richor.w All Rights Reserved</p>
-	</footer> -->
+
+	
 </body>
 </html>
